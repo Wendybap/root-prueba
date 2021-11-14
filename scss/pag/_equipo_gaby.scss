@@ -1,0 +1,113 @@
+// Estilo subtitulo principal
+.container {
+  &--subtitulos {
+    color: $color_subtitulos;
+    font-size: $font_subtitulos_principales;
+    margin: 0.5rem auto;
+    text-transform: capitalize;
+    transition: all 2s;
+    font-weight: 700;
+    animation-name: animacionTitulo;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-delay: 0s;
+  }
+  // Animaciones a los titulos
+  @keyframes animacionTitulo {
+    0% {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    50% {
+      color: #f2b6d7;
+    }
+  }
+}
+
+@mixin imgBackground($width, $img, $size) {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: $width;
+    height: 100%;
+    background: url($img);
+    background-position: center;
+    background-size: $size;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+}
+// Estilo de las secciones
+.containerE {
+  padding: 1rem;
+  align-items: center;
+  // Estilo para colocar la imagen de los parrafos al FONDO
+  &--imgFondo {
+    @include imgBackground(57%, "./../../imagenes/fondo6.png", cover);
+  }
+  &--imgFondo1 {
+    @include imgBackground(75%, "./../../imagenes/fondo4.png", cover);
+  }
+  &--imgFondo3 {
+    @include imgBackground(100%, "./../../imagenes/fondo5.png", cover);
+  }
+  &--texto {
+    color: $color_subtitulos;
+    font-size: $font_subtitulos;
+
+    font-weight: 700;
+    position: relative;
+  }
+  &--Parrafos {
+    font-size: $font_parrafo;
+    color: $color_parrafo;
+    position: relative;
+  }
+}
+
+// Estilo de las imagenes
+.formato {
+  width: 100%;
+
+  &--img {
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px -10px hsl(340, 64%, 38%);
+  }
+}
+// Estilo para las cards
+.card {
+  margin-bottom: 3rem;
+  border: none !important;
+
+  &--formato {
+    width: 100%;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 10rem;
+  }
+}
+// each para degradar el color de los bordes de la foto sección 4
+$maps: (
+  mapas1: $bcolor1,
+  mapas2: $bcolor2,
+  mapas3: $bcolor3,
+  mapas4: $bcolor4,
+);
+@each $mapas, $color in $maps {
+  .card--#{$mapas} {
+    background-color: $color;
+    padding: 0.4rem;
+    box-shadow: 0 10px 30px -10px hsl(340, 64%, 38%);
+  }
+}

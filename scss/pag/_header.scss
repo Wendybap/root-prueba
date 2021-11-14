@@ -1,0 +1,30 @@
+// Estilo del menu de navegación
+.menu {
+  background-color: hsl(339, 87%, 85%);
+
+  li a {
+    color: #0d0d0d !important;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.7rem;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 1px solid #bf0a5e;
+      border-radius: 1px;
+      font-weight: bold;
+      background-color: floralwhite;
+      opacity: 0.5;
+    }
+  }
+}
+.btn-rounded {
+  position: relative;
+}
+.btn-rounded span i {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
