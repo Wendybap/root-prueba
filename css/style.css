@@ -11647,12 +11647,14 @@ html {
 .containerE--texto {
   color: #f291bf;
   font-size: 1.5rem;
+  line-height: 1.6;
   font-weight: 700;
   position: relative;
 }
 .containerE--Parrafos {
   font-size: 1rem;
   color: #000000;
+  line-height: 1.6;
   position: relative;
 }
 

@@ -61,12 +61,14 @@
   &--texto {
     color: $color_subtitulos;
     font-size: $font_subtitulos;
+    line-height: 1.6;
     font-weight: 700;
     position: relative;
   }
   &--Parrafos {
     font-size: $font_parrafo;
     color: $color_parrafo;
+    line-height: 1.6;
     position: relative;
   }
 }
