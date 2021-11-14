@@ -11387,11 +11387,11 @@ textarea.form-control-lg {
 html,
 body {
   font-family: "Comic Neue", cursive;
-  font-size: 1.1rem;
   max-width: 100%;
 }
 
 html {
+  font-size: 62.5%;
   width: 100%;
   height: 100%;
   justify-content: center;
